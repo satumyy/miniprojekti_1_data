@@ -20,6 +20,7 @@ group by Vuosi
  from dim_tuote as dt
  join fact_vuokraus as fv on dt.tuoteyksilo_id = fv.tuoteyksilo_id
  join dim_vuokrauspiste as dv on fv.palautuspiste = dv.vuokrauspiste_id
+ where dv.kaupunki = 'Tampere'
  group by dt.malli, dt.merkki
 
 
